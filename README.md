@@ -20,9 +20,9 @@
                  android:authorities="${applicationId}.fileProvider"
                  android:exported="false"
                  android:grantUriPermissions="true"
-                 tools:replace="android:authorities">
+               >
              <meta-data
                      android:name="android.support.FILE_PROVIDER_PATHS"
-                     android:resource="@xml/filepaths"
-                     tools:replace="android:resource" />
+                     android:resource="@xml/provider_paths"
+                      />
          </provider>`
