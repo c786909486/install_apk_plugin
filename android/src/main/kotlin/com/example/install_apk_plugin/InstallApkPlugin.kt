@@ -47,7 +47,7 @@ public class InstallApkPlugin: FlutterPlugin, MethodCallHandler {
         val path = call.argument<String>("path")
         val file = File(path)
         if (file.exists()){
-          InstallAppUtils.installApp(context!!,file)
+          InstallUtils.installApp(context!!,file)
         }
 
       }
