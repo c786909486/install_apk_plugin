@@ -26,7 +26,7 @@ dependencies:
 
   base_flutter:
     git:
-      url: https://github.com/c786909486/base_flutter_plugin.git
+      url: https://gitee.com/code1993/base_flutter_plugin.git
 
 dev_dependencies:
   flutter_test:

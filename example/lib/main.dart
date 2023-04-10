@@ -66,7 +66,7 @@ class MainPage extends StatelessWidget{
         title: const Text('Plugin example app'),
       ),
       body: Center(
-        child: RaisedButton(child: Text("下载"),onPressed: (){
+        child: TextButton(child: Text("下载"),onPressed: (){
           download(context);
         },),
       ),
