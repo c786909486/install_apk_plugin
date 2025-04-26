@@ -1,16 +1,16 @@
 import 'dart:io';
 
-import 'package:base_flutter/base_flutter.dart';
+// import 'package:base_flutter/base_flutter.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 
 import 'package:flutter/services.dart';
 import 'package:install_apk_plugin/install_apk_plugin.dart';
-import 'package:path_provider/path_provider.dart';
+// import 'package:path_provider/path_provider.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  HttpGo.HttpGogetInstance(baseUrl:"http://47.97.204.71:8081/fslrsy_test");
+  // HttpGo.HttpGogetInstance(baseUrl:"http://47.97.204.71:8081/fslrsy_test");
   runApp(MyApp());
 }
 
@@ -74,13 +74,13 @@ class MainPage extends StatelessWidget{
   }
 
   Future<void> download(context) async {
-    Directory appDocDir = await getExternalStorageDirectory();
-    AppDownloadUtils().showDownloadDialog(context, "http://221.226.30.132:8088/templates/posApp.apk", appDocDir.path+"/posApp.apk",(path){
-      print("下载成功:$path}");
-//      OpenFile.open(path);
-      InstallApkPlugin.installApk(path);
-    },(error){
-    });
+//     Directory appDocDir = await getExternalStorageDirectory();
+//     AppDownloadUtils().showDownloadDialog(context, "http://221.226.30.132:8088/templates/posApp.apk", appDocDir.path+"/posApp.apk",(path){
+//       print("下载成功:$path}");
+// //      OpenFile.open(path);
+//       InstallApkPlugin.installApk(path);
+//     },(error){
+//     });
   }
 
 }

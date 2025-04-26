@@ -27,6 +27,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
+    namespace = "com.example.install_apk_plugin"
     compileSdk = 34
 
     compileOptions {
