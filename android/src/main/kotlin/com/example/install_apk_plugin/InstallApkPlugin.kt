@@ -16,25 +16,12 @@ public class InstallApkPlugin: FlutterPlugin, MethodCallHandler {
 
   private lateinit var channel : MethodChannel
 
+  private var context:Context?=null
 
   override fun onAttachedToEngine(@NonNull flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
     channel = MethodChannel(flutterPluginBinding.binaryMessenger, "install_apk_plugin")
     context = flutterPluginBinding.applicationContext
     channel.setMethodCallHandler(this);
-  }
-
-
-
-  companion object {
-
-    private var context:Context?=null
-
-    @JvmStatic
-    fun registerWith(registrar: Registrar) {
-      val channel = MethodChannel(registrar.messenger(), "install_apk_plugin")
-      context = registrar.activeContext()
-      channel.setMethodCallHandler(InstallApkPlugin())
-    }
   }
 
   override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
